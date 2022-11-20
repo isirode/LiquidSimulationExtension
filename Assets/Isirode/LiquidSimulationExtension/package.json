@@ -7,6 +7,5 @@
   "keywords": [ "liquid", "water", "simulation", "2D" ],
   "category": "liquid water simulation 2D",
   "dependencies": {
-	  "com.isirode.liquid-simulation": "https://github.com/isirode/Liquid-Simulation.git?path=/Assets/Isirode/Liquid-Simulation#0.0.3"
   }
 }
