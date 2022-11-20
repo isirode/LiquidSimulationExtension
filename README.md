@@ -17,6 +17,8 @@ You can add this package as a git url :
 
 The project will be added to your "Packages" folder, the scenes will be read-only, if you want to open them, just copy them in your Assets folder and they will be usable.
 
+This will import [Liquid-Simulation](https://github.com/isirode/Liquid-Simulation) automatically.
+
 You can also download the .unitypackage of the version you want, here for instance https://github.com/isirode/LiquidSimulationExtension/releases/tag/0.0.1 and add it manually to your project. 
 This should import the project in your Assets folder.
 
