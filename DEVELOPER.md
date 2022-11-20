@@ -20,3 +20,8 @@ There is a list of features below which could be interesting.
   - [x] Move example elements to prefab
   - [ ] Camera auto-setup / prebab system
 
+## Todo
+
+- [ ] Checkout open source spawn libraries
+- [ ] Move some of the devs to Liquid-Simulation
+
