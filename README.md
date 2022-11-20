@@ -18,6 +18,7 @@ You can add this package as a git url :
 The project will be added to your "Packages" folder, the scenes will be read-only, if you want to open them, just copy them in your Assets folder and they will be usable.
 
 ~~This will import [Liquid-Simulation](https://github.com/isirode/Liquid-Simulation) automatically.~~
+
 You have to import it manually : import https://github.com/isirode/Liquid-Simulation.git?path=/Assets/Isirode/Liquid-Simulation#0.0.3 as a Git url.
 
 See [this issue](https://forum.unity.com/threads/custom-package-with-git-dependencies.628390/) if you want to know why.
