@@ -17,6 +17,12 @@ public class SimpleWaterfall : MonoBehaviour
 
     private Coroutine repeatingCoroutine;
 
+    public delegate void SpawningFinishedDelegate(int spawnCount);
+    public event SpawningFinishedDelegate SpawningFinished;
+
+    public bool resetOnSpawnFinished = false;
+    public bool removeInstancesOnResetOnSpawnFinished = false;
+
     private void Start()
     {
         spawnTiming = 1f / spawnRatePerSeconds;
@@ -46,6 +52,12 @@ public class SimpleWaterfall : MonoBehaviour
 
             yield return new WaitForSeconds(spawnTiming);
         }
+        Debug.Log("Done spawning");
+        SpawningFinished?.Invoke(currentSpawnCount);
+        if (resetOnSpawnFinished)
+        {
+            ResetState(removeInstancesOnResetOnSpawnFinished);
+        }
     }
 
     public void ResetState(bool removeInstances)
@@ -74,13 +86,29 @@ public class SimpleWaterfall : MonoBehaviour
         isSpawning = false;
     }
 
+    /// <summary>
+    /// Pause the spawning
+    /// </summary>
     public void Pause()
     {
         isSpawning = false;
     }
 
-    public void ReStart()
+    /// <summary>
+    /// Stop the pause
+    /// </summary>
+    public void Continue()
     {
         isSpawning = true;
+    }
+
+    /// <summary>
+    /// Start the coroutine
+    /// This does not reset the state
+    /// </summary>
+    public void Restart()
+    {
+        isSpawning = true;
+        repeatingCoroutine = StartCoroutine(AddPoint());
     }
 }

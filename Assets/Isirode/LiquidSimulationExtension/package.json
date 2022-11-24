@@ -1,7 +1,7 @@
 {
   "name": "com.isirode.liquid-simulation-extension",
   "displayName": "Isirode.LiquidSimulationExtension",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "unity": "2021.3",
   "description": "A simple extension of Liquid-Simulation",
   "keywords": [ "liquid", "water", "simulation", "2D" ],
