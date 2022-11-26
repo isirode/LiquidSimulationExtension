@@ -28,11 +28,11 @@ public class SimpleWaterfall : MonoBehaviour
         spawnTiming = 1f / spawnRatePerSeconds;
         if (isSpawning)
         {
-            repeatingCoroutine = StartCoroutine(AddPoint());
+            repeatingCoroutine = StartCoroutine(SpawnWater());
         }
     }
 
-    IEnumerator AddPoint()
+    IEnumerator SpawnWater()
     {
         while (currentSpawnCount < maxSpawn && isSpawning == true)
         {
@@ -65,6 +65,7 @@ public class SimpleWaterfall : MonoBehaviour
         if (repeatingCoroutine != null) 
         {
             StopCoroutine(repeatingCoroutine);
+            repeatingCoroutine = null;
         }
         if (removeInstances)
         {
@@ -109,6 +110,6 @@ public class SimpleWaterfall : MonoBehaviour
     public void Restart()
     {
         isSpawning = true;
-        repeatingCoroutine = StartCoroutine(AddPoint());
+        repeatingCoroutine = StartCoroutine(SpawnWater());
     }
 }

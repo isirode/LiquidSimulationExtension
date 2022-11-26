@@ -30,11 +30,11 @@ public class SpawnWithDirection : MonoBehaviour
         spawnTiming = 1f / spawnRatePerSeconds;
         if (isSpawning)
         {
-            repeatingCoroutine = StartCoroutine(AddPoint());
+            repeatingCoroutine = StartCoroutine(SpawnWater());
         }
     }
 
-    IEnumerator AddPoint()
+    IEnumerator SpawnWater()
     {
         while (currentSpawnCount < maxSpawn && isSpawning == true)
         {
@@ -80,6 +80,7 @@ public class SpawnWithDirection : MonoBehaviour
         if (repeatingCoroutine != null)
         {
             StopCoroutine(repeatingCoroutine);
+            repeatingCoroutine = null;
         }
         if (removeInstances)
         {
@@ -126,6 +127,6 @@ public class SpawnWithDirection : MonoBehaviour
     public void Restart()
     {
         isSpawning = true;
-        repeatingCoroutine = StartCoroutine(AddPoint());
+        repeatingCoroutine = StartCoroutine(SpawnWater());
     }
 }
