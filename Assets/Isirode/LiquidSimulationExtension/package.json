@@ -1,14 +1,12 @@
 {
   "name": "com.isirode.liquid-simulation-extension",
   "displayName": "Isirode.LiquidSimulationExtension",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "unity": "2021.3",
   "description": "A simple extension of Liquid-Simulation",
   "keywords": [ "liquid", "water", "simulation", "2D" ],
   "category": "liquid water simulation 2D",
   "dependencies": {
-  },
-  "gitDependencies": {
 	  "com.isirode.liquid-simulation": "https://github.com/isirode/Liquid-Simulation.git?path=/Assets/Isirode/Liquid-Simulation#0.0.3"
   }
 }
